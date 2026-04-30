@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ffPath - Edit Post</title>
+  <link rel="stylesheet" href="/css/edit.css">
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Edit Post ✏️</h1>
+
+    <form method="POST" action="/posts/<%= post.id %>/edit">
+
+      <p>Title</p>
+      <input type="text" name="title" value="<%= post.title %>">
+
+      <p>Content</p>
+      <textarea name="content"><%= post.content %></textarea>
+
+      <p>Image URL</p>
+      <input type="text" name="imgUrl" value="<%= post.imgUrl %>">
+
+      <p>Hashtags</p>
+      <input type="text" name="hashtags" value="<%= hashtags %>">
+
+      <button type="submit">Update</button>
+    </form>
+
+    <a class="back-link" href="/posts">← Back</a>
+  </div>
+
+</body>
+</html>

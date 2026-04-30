@@ -1,0 +1,244 @@
+*   {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+    }
+
+    .page {
+      width: 760px;
+      margin: 36px auto 60px;
+    }
+
+    .header {
+      margin-bottom: 24px;
+    }
+
+    .title {
+      margin: 0 0 12px;
+      font-size: 58px;
+      color: red;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .welcome {
+      margin: 0 0 18px;
+      font-size: 18px;
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .nav-link {
+      color: red;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    .search-form {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .search-input {
+      flex: 1;
+      padding: 12px 14px;
+      border: 1px solid #cfcfcf;
+      border-radius: 8px;
+      font-size: 15px;
+      background: #fff;
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: red;
+    }
+
+    .search-btn {
+      padding: 12px 18px;
+      background: red;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .search-btn:hover {
+      background: #d85f12;
+    }
+
+    .message {
+      padding: 12px 14px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+
+    .success {
+      background: #fff1e7;
+      color: #d85f12;
+      border: 1px solid #ffd2b2;
+    }
+
+    .error {
+      background: #ffe6e6;
+      color: #c62828;
+      border: 1px solid #ffbdbd;
+    }
+
+    .post-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 18px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+    }
+
+    .user-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .avatar {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid red;
+    }
+
+    .avatar-fallback {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff1e7;
+      color: red;
+      font-weight: bold;
+      border: 2px solid red;
+      font-size: 18px;
+    }
+
+    .user-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .posted-by {
+      margin: 0;
+      font-size: 13px;
+      color: #777;
+    }
+
+    .username {
+      margin: 0;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .post-title {
+      margin: 0 0 10px;
+      font-size: 32px;
+      color: #111;
+      line-height: 1.2;
+    }
+
+    .post-content {
+      margin: 0 0 14px;
+      line-height: 1.6;
+      color: #333;
+      font-size: 15px;
+    }
+
+    .post-img {
+      width: 100%;
+      max-height: 580px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 12px 0 14px;
+      display: block;
+    }
+
+    .meta-line {
+      margin: 8px 0;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .tag-list {
+      margin: 12px 0 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #fff1e7;
+      color: red;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .btn-link {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: red;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .btn-link:hover {
+      background: #d85f12;
+    }
+
+    .btn-outline {
+      background: #fff;
+      color: red;
+      border: 1px solid red;
+    }
+
+    .btn-outline:hover {
+      background: #fff1e7;
+    }
+
+    .divider {
+      margin-top: 26px;
+      border: none;
+      border-top: 1px solid #e8e8e8;
+    }
