@@ -1,0 +1,223 @@
+*   {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+    }
+
+    .page {
+      width: 760px;
+      margin: 36px auto 60px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: red;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+    }
+
+    .user-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .avatar {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid red;
+    }
+
+    .avatar-fallback {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff1e7;
+      color: red;
+      border: 2px solid red;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .posted-by {
+      margin: 0;
+      font-size: 13px;
+      color: #777;
+    }
+
+    .username {
+      margin: 4px 0 0;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .post-title {
+      margin: 8px 0 12px;
+      font-size: 34px;
+      color: red;
+      line-height: 1.2;
+    }
+
+    .post-content {
+      margin: 0 0 16px;
+      line-height: 1.6;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .post-img {
+      width: 100%;
+      max-width: 100%;
+      max-height: 520px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+      margin: 12px 0 16px;
+    }
+
+    .meta-line {
+      margin: 8px 0;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .btn-row {
+      margin: 16px 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn-link {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: red;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .btn-link:hover {
+      background: #d85f12;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 14px 0 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #fff1e7;
+      color: red;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #e8e8e8;
+      margin: 22px 0;
+    }
+
+    .section-title {
+      margin: 0 0 14px;
+      color: red;
+      font-size: 24px;
+    }
+
+    .comment-card {
+      padding: 14px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .comment-user {
+      margin: 0 0 6px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .comment-content {
+      margin: 0 0 8px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .comment-delete {
+      color: red;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .comment-delete:hover {
+      text-decoration: underline;
+    }
+
+    .empty-comment {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .comment-form {
+      margin-top: 18px;
+    }
+
+    .comment-input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      outline: none;
+      margin-bottom: 12px;
+    }
+
+    .comment-input:focus {
+      border-color: red;
+    }
+
+    .comment-btn {
+      padding: 12px 18px;
+      border: none;
+      border-radius: 8px;
+      background: red;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .comment-btn:hover {
+      background: #d85f12;
+    }

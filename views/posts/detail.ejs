@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Post</title>
+  <link rel="stylesheet" href="/css/detail.css">
+  
+</head>
+<body>
+  <div class="page">
+
+    <a class="back-link" href="/posts">← Back</a>
+
+    <div class="card">
+
+      <h1 class="section-title">Detail Post 🔍</h1>
+
+      <div class="user-row">
+        <% if (post.User && post.User.Profile && post.User.Profile.displayAvatar) { %>
+          <img class="avatar" src="<%= post.User.Profile.displayAvatar %>" width="50" height="50">
+        <% } else { %>
+          <span class="avatar-fallback">No Avatar</span>
+        <% } %>
+
+        <div>
+          <p class="posted-by">Posted by:</p>
+          <p class="username">
+            <strong>
+              <%= post.User ? (post.User.username || post.User.email) : 'Unknown' %>
+            </strong>
+          </p>
+          <% if (post.User && post.User.Profile && post.User.Profile.status) { %>
+              <%= post.User.Profile.status %>
+              <% } %>
+        </div>
+      </div>
+
+      <h2 class="post-title"><%= post.title %></h2>
+
+      <p class="post-content"><%= post.content %></p>
+
+      <% if (post.imgUrl) { %>
+        <img class="post-img" src="<%= post.imgUrl %>" width="300">
+      <% } %>
+
+      <p class="meta-line">📍 Location: <%= post.city %>, <%= post.country %></p>
+
+      <p class="meta-line">❤️ Likes: <%= post.getLikeCount() %></p>
+
+      <%
+        let isLiked = false
+        if (post.Likes) {
+          for (let like of post.Likes) {
+            if (like.userId === userId) {
+              isLiked = true
+            }
+          }
+        }
+      %>
+
+      <div class="btn-row">
+        <% if (isLiked) { %>
+          <a class="btn-link" href="/posts/<%= post.id %>/unlike">Unlike</a>
+        <% } else { %>
+          <a class="btn-link" href="/posts/<%= post.id %>/like">Like</a>
+        <% } %>
+      </div>
+
+      
+      
+      <hr class="divider">
+
+      <% if (post.Tags && post.Tags.length) { %>
+        <div class="tag-list">
+          <% post.Tags.forEach(tag => { %>
+            <span class="tag"><%= tag.name %></span>
+          <% }) %>
+        </div>
+      <% } %>
+
+      <hr class="divider">
+
+      <h3 class="section-title">Comments</h3>
+
+      <% if (post.Comments && post.Comments.length) { %>
+        <% post.Comments.forEach(comment => { %>
+          <div class="comment-card">
+            <strong class="comment-user">
+              <%= comment.User ? (comment.User.username || comment.User.email) : 'Unknown' %>
+            </strong>
+            <p class="comment-content"><%= comment.content %></p>
+
+            <% if (comment.userId === userId || role === 'admin') { %>
+              <a class="comment-delete" href="/posts/comments/<%= comment.id %>/delete">Delete</a>
+            <% } %>
+          </div>
+        <% }) %>
+      <% } else { %>
+        <p class="empty-comment">No comments yet</p>
+      <% } %>
+
+      <form class="comment-form" method="POST" action="/posts/<%= post.id %>/comments">
+        <input class="comment-input" type="text" name="content" placeholder="Write comment..." required>
+        <button class="comment-btn" type="submit">Add Comment</button>
+      </form>
+
+    </div>
+  </div>
+</body>
+</html>

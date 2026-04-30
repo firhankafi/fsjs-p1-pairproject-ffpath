@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ffPath - Add Post</title>
+  <link rel="stylesheet" href="/css/add.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Create Post 💡</h1>
+
+    <% if (error) { %>
+      <p class="message"><%= error %></p>
+    <% } %>
+
+    <form method="POST" action="/posts/add">
+      <p>Title</p>
+      <input type="text" name="title">
+
+      <p>Content</p>
+      <textarea name="content"></textarea>
+
+      <p>Image URL</p>
+      <input type="text" name="imgUrl">
+
+      <p>Hashtags</p>
+      <input type="text" name="hashtags" placeholder="#coding #healing #daily">
+
+      <button type="submit">Create</button>
+    </form>
+
+    <a class="back-link" href="/posts">← Back</a>
+  </div>
+</body>
+</html>
